@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>State and Event Handlers</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+
+      function App() {
+        const [input, setInput] = React.useState('')
+
+        function saveInputText(event) {
+          setInput(event.target.value)
+        }
+
+        function reset() {
+          setInput('')
+        }
+
+        function example() {
+          setInput('Adem')
+        }
+
+        return (
+          <>
+            <input
+              placeholder="Type a name here"
+              onChange={saveInputText}
+              value={input}
+            />
+            <button onClick={reset}>Reset</button>
+            <button onClick={example}>Example</button>
+
+            <p>Hello {input}</p>
+          </>
+        )
+      }
+
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>

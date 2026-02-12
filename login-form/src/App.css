@@ -1,0 +1,21 @@
+h1 {
+  margin: 20px 0;
+}
+
+input {
+  margin: 10px 10px 0 0;
+  padding: 8px;
+  font-size: 16px;
+  width: 250px;
+}
+
+.btn {
+  background: rgb(0, 123, 255);
+  margin: 10px 10px 0 0;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
